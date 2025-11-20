@@ -60,8 +60,8 @@ if email_to_check:
         st.subheader(f"✅ Registered: {attendee['attendee_name']}")
         st.write(f"Email: {attendee['email']}")
         st.write(f"Phone: {attendee['phone_number']}")
-        if "qrcode_url" in attendee and pd.notna(attendee["qrcode_url"]):
-            st.image(attendee["qrcode_url"], width=200)
+        if "qr_code" in attendee and pd.notna(attendee["qr_code"]):
+            st.image(attendee["qr_code"], width=200)
         
         if attendee["checkin_status"] != "CHECKED IN":
             if st.button("Check In"):
